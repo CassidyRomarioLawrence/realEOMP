@@ -126,7 +126,7 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
 function displayed() {
     myProducts.forEach((items) => {
         document.querySelector('#prod').innerHTML += `
-        <div class="card p-2" style="width: 18rem;">
+        <div class="card p-2 mx-3" style="width: 18rem;">
   <img src="${items.image}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${items.description.productName}</h5>
