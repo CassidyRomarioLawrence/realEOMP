@@ -1,5 +1,5 @@
-let myProducts = JSON.parse(localStorage.getItem('items')) ?
-    JSON.parse(localStorage.setItem('items')) :
+let products = JSON.parse(localStorage.getItem('items')) ?
+    JSON.parse(localStorage.getItem('items')) :
     [
         {
             id: 1,
@@ -9,7 +9,8 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Light Grey",
                 price: 135
-            }
+            },
+            type:"T-shirt"
         },
         {
             id: 2,
@@ -19,7 +20,8 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Black",
                 price: 128
-            }
+            },
+            type:"T-shirt"
         },
         {
             id: 3,
@@ -29,7 +31,8 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Navy Blue",
                 price: 286
-            }
+            },
+            type: "Trousers"
         },
         {
             id: 4,
@@ -39,7 +42,8 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Apricot",
                 price: 148
-            }
+            },
+            type:"T-shirt"
         },
         {
             id: 5,
@@ -49,7 +53,8 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Black and White",
                 price: 225
-            }
+            },
+            type: "Trousers"
         },
         {
             id: 6,
@@ -59,7 +64,8 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Khaki",
                 price: 286
-            }
+            },
+            type: "Trousers"
         },
         {
             id: 7,
@@ -69,7 +75,8 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Black",
                 price: 146
-            }
+            },
+            type:"T-shirt"
         },
         {
             id: 8,
@@ -79,7 +86,8 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Grey",
                 price: 195
-            }
+            },
+            type: "Trousers"
         },
         {
             id: 9,
@@ -89,7 +97,8 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Black",
                 price: 120
-            }
+            },
+            type:"T-shirt"
         },
         {
             id: 10,
@@ -99,7 +108,8 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Apricot",
                 price: 263
-            }
+            },
+            type:"Shorts"
         },
         {
             id: 11,
@@ -109,7 +119,8 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Black",
                 price: 280
-            }
+            },
+            type:"Shorts"
         },
         {
             id: 12,
@@ -119,16 +130,21 @@ let myProducts = JSON.parse(localStorage.getItem('items')) ?
                 productSize: "XS, S, M, L, XL, XXL",
                 productColor: "Black and White",
                 price: 310
-            }
+            },
+            type: "Trousers"
         },
     ];
 
 function displayed() {
-    myProducts.forEach((items) => {
+    products.forEach((items) => {
         document.querySelector('#prod').innerHTML += `
         <div class="card p-2 mx-3" style="width: 18rem;">
+        <div class="front>"
   <img src="${items.image}" class="card-img-top" alt="...">
-  <div class="card-body">
+        </div>
+        <div class="back">
+    <img src="${items.image}" class="card-img-top" alt="...">
+  <div class="card-body text-center">
     <h5 class="card-title">${items.description.productName}</h5>
     <p class="card-text">Sizes: ${items.description.productSize}</p>
     <p class="card-text">Color: ${items.description.productColor}</p>
@@ -137,6 +153,8 @@ function displayed() {
   </div>
 </div>`
     })
-}
+};
+displayed();
 
-displayed()
+localStorage.setItem('items', JSON.stringify(products));
+
