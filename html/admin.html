@@ -47,26 +47,91 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr> -->
             </tbody>
         </table>
     </main>
+<!-- Add Item Modal -->
+    <div class="modal fade" id="Modal0" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="Modal0Label">Add</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <h4>Product</h4>
+              <div id="bottomBorder">
+                  <div>
+                    <label>Name of product :</label>
+                    <input type="text" id="productName" placeholder="Enter name of product">
+                  </div>
+                  <div>
+                    <label>Size :</label>
+                    <input type="text" id="productSize" placeholder="Enter available sizes of clothing">
+                  </div>
+                  <div>
+                    <label>Color :</label>
+                    <input type="text" id="productColor" placeholder="Enter clothing color">
+                  </div>
+                  <div>
+                    <label>Price of clothing :</label>
+                    <input type="number" id="price" placeholder="Enter price">
+                  </div>
+              </div>
+              <h4>Image</h4>
+              <div id="bottomBorder">
+                <label>Image URL:</label>
+                <input type="text" id="image" placeholder="Enter url link for image">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="addIt">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Edit Item Modal -->
+<div class="modal fade" id="Modal1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="Modal1Label">Edit</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h4>Product</h4>
+          <div id="bottomBorder">
+              <div>
+                <label>Name of product :</label>
+                <input type="text" id="productName1" placeholder="Enter name of product">
+              </div>
+              <div>
+                <label>Size :</label>
+                <input type="text" id="productSize1" placeholder="Enter available sizes of clothing">
+              </div>
+              <div>
+                <label>Color :</label>
+                <input type="text" id="productColor1" placeholder="Enter clothing color">
+              </div>
+              <div>
+                <label>Price of clothing :</label>
+                <input type="number" id="price1" placeholder="Enter price">
+              </div>
+          </div>
+          <h4>Image</h4>
+          <div id="bottomBorder">
+            <label>Image URL:</label>
+                <input type="text" id="image" placeholder="Enter url link for image" readonly>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="editIt">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <footer class="text-center text-light">
         &copy; 2022 SUPERLATIVE
     </footer>

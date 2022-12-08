@@ -10,12 +10,11 @@ function tableDisplay() {
             <td>${items.description.productColor}</td>
             <td>R ${items.description.price}</td>
             <td>
-            <i class="fa-solid fa-pen-to-square" onclick=""></i> 
-            <i class="fa-solid fa-trash" onclick=""></i>
+            <i onClick="" class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#Modal1"></i> 
+            <i onClick="" class="fa-solid fa-trash"></i>
             </td>
         </tr>`
     })
 };
 
-tableDisplay(products);
-
+tableDisplay();

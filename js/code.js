@@ -156,5 +156,4 @@ function displayed() {
 };
 displayed();
 
-localStorage.setItem('items', JSON.stringify(products));
-
+localStorage.setItem('products', JSON.stringify(products));
