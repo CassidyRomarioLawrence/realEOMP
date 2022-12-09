@@ -33,22 +33,25 @@
         </nav>
     </header>
     <main>
+      <section>
         <table class="table table-dark my-3 text-center" id="admin">
-                <h4 class="display-4 text-center">Admin</h4>
-            </div>
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Product Name</th>
-                    <th scope="col">Sizes</th>
-                    <th scope="col">Color</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Edit</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
+          <h4 class="display-4 text-center">Admin</h4>
+          </div>
+          <button data-bs-toggle="modal" data-bs-target="#Modal0" id="addProduct">Add</button>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Sizes</th>
+              <th scope="col">Color</th>
+              <th scope="col">Price</th>
+              <th scope="col">Edit</th>
+            </tr>
+          </thead>
+          <tbody id="admin">
+          </tbody>
         </table>
+      </section>
     </main>
 <!-- Add Item Modal -->
     <div class="modal fade" id="Modal0" tabindex="-1">
